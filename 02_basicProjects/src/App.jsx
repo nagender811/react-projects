@@ -9,6 +9,8 @@ import QRCodeGen from "./components/qrCodeGen/QRCodeGen";
 import ThemeSwitcher from "./components/themeSwitcher/ThemeSwitcher";
 import ScrollIndicator from "./components/scrollIndicator/ScrollIndicator";
 import TabTest from "./components/customTabs/TabTest";
+import ModalTest from "./components/customModalPopup/ModalTest";
+import GithubProfileFinder from "./components/githubProfileFinder/GithubProfileFinder";
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
       {/* <QRCodeGen /> */}
       {/* <ThemeSwitcher /> */}
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
-      <TabTest />
+      {/* <TabTest /> */}
+      {/* <ModalTest /> */}
+      <GithubProfileFinder />
     </div>
   );
 }
