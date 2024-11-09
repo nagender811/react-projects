@@ -9,7 +9,7 @@ import view from "../assets/view.png";
 import bin from "../assets/deleteBlack.png";
 import share from "../assets/share.png";
 import calendar from "../assets/calendar.png";
-import search from "../assets/search.png"
+import search from "../assets/search.png";
 const Pastes = () => {
   const pastes = useSelector((state) => state.paste.pastes);
   const [searchTerm, setSearchTerm] = useState("");
@@ -48,15 +48,18 @@ const Pastes = () => {
   return (
     <div>
       <div className="relative min-w-[60%]">
-            <input
-                className="p-1 px-10 mt-4 rounded-lg lg:w-[60%] sm:w-full  border border-[#4B5563] bg-[#27272A] text-white"
-                type="search"
-                placeholder="Search title here..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <img src={search} className="absolute lg:left-[250px] sm:left-3 top-[67%] transform -translate-y-[50%] text-gray-400 w-5" />
-        </div>
+        <input
+          className="p-1 px-10 mt-4 rounded-lg lg:w-[60%] sm:w-full  border border-[#4B5563] bg-[#27272A] text-white"
+          type="search"
+          placeholder="Search title here..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <img
+          src={search}
+          className="absolute lg:left-[250px] sm:left-3 top-[67%] transform -translate-y-[50%] text-gray-400 w-5"
+        />
+      </div>
       <div className="flex flex-col gap-3 border border-[#4B5563] m-5 p-5 lg:w-[60%] mx-auto rounded-lg">
         <h1 className="text-3xl font-bold text-white">All Pastes</h1>
         <div className=" border border-[#4B5563]"></div>
@@ -110,7 +113,11 @@ const Pastes = () => {
                   </div>
                   <div>
                     <div className="flex gap-2 my-4 mr-4">
-                      <img className="w-7 bg-white p-1 rounded-lg" src={calendar} alt="date" />
+                      <img
+                        className="w-7 bg-white p-1 rounded-lg"
+                        src={calendar}
+                        alt="date"
+                      />
                       <p className="font-semibold">{paste.createdAt}</p>
                     </div>
                   </div>
